@@ -147,20 +147,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: frontendtodo
 spec:
   selector:
     matchLabels:
-      name: frontend
+      name: frontendtodo
   template:
     metadata:
       labels:
-        name: frontend
+        name: frontendtodo
     spec:
       nodeSelector:
         kubernetes.io/os: linux
       containers:
-      - name: frontend
+      - name: frontendtodo
         image: azdspublic/todo-app-frontend
         env:
         - name: STATS_QUEUE_URI
@@ -169,11 +169,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend
+  name: frontendtodo
 spec:
   type: LoadBalancer
   selector:
-    name: frontend
+    name: frontendtodo
   ports:
   - port: 80
     targetPort: 80
