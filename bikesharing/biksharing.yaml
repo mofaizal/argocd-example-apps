@@ -17,9 +17,9 @@ spec:
     helm:
       parameters:
         - name: 'bikesharingweb.ingress.hosts[0]'
-          value: dev.bikesharingweb.52.139.233.207.nip.io
+          value: dev.bikesharingweb.52.139.244.220.nip.io
         - name: 'gateway.ingress.hosts[0]'
-          value: dev.gateway.52.139.233.207.nip.io
+          value: dev.gateway.52.139.244.220.nip.io
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: bikeapp
