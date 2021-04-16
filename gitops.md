@@ -89,6 +89,8 @@ module "argocd" {
   namespace = "argocd"
 }
 ```
+Here is the source [Github repo for ArgoCD terraform](https://github.com/aareet/terraform-kubernetes-argocd) 
+
 By default, the Argo CD API server is not exposed with an external IP. To access the API server, choose one of the following techniques to expose the Argo CD API server:
 
 Change the argocd-server service type to LoadBalancer:
@@ -124,5 +126,4 @@ kubectl get pods -n argocd -l app.kubernetes.io/name=argocd-server -o name | cut
 Now you need password to login to the server, the default user name is admin. The password for the Argo CD is hostname of the service. To get host name issue following 
 
 ![argocd password](./images/serverpwd.PNG)
-
 
